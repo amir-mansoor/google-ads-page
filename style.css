@@ -17,6 +17,10 @@ header {
   margin: 0 auto;
 }
 
+.logo {
+  margin-top: 10px;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -152,7 +156,6 @@ a {
   align-items: center;
   border-radius: 20px;
   margin-bottom: 5px;
-  background-color: #f9f9f9;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -214,4 +217,37 @@ p {
   color: #555;
   margin-bottom: 0;
   height: 100%; /* Ensures that text does not cause height changes */
+}
+
+.theme {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  margin-top: 10rem;
+}
+
+.theme .container h1 {
+  font-size: 40px;
+}
+
+.theme .container {
+  position: relative;
+}
+
+.theme .container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 8, 255, 0.081),
+    rgba(0, 102, 255, 0)
+  );
+  clip-path: circle(50% at 49% 74%);
+  z-index: -1;
 }
