@@ -313,3 +313,101 @@ p {
 .icons {
   font-size: 30px !important;
 }
+
+.business {
+  text-align: center;
+  height: 80vh;
+}
+
+.business .container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.business .container h1 {
+  font-size: 40px;
+  line-height: 0;
+}
+
+.highlight {
+  color: #185abc;
+  font-size: 35px;
+}
+
+.grid-rows {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.grid-rows .flex:nth-child(3) {
+  margin-left: 2rem;
+}
+
+.grid-rows .flex > div {
+  text-align: left;
+}
+
+.grid-rows .flex:nth-child(3) img {
+  width: 30%;
+}
+
+.grid-rows .flex:nth-child(3) div {
+  margin-left: 1.2rem;
+}
+
+.highlighted-section {
+  height: 70vh;
+  background-color: #185abc1f;
+  text-align: center;
+  padding: 20px;
+}
+
+.highlighted-section .container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.highlighted-section .container h1 {
+  font-size: 40px;
+}
+
+.two-sides {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.two-sides img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.two-sides div {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.two-sides div p {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+footer {
+  color: gray;
+  padding: 20px;
+}
+
+footer .container h1 {
+  margin-top: 10px;
+}
+
+footer .container {
+  align-items: center;
+}
+
+footer .container ul {
+  display: flex;
+  align-items: center;
+}
