@@ -108,45 +108,110 @@ a {
   font-weight: normal;
 }
 
+/*  */
+
 .tabs-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
   text-align: center;
-  margin-top: 15rem;
+}
+
+.tabs-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+
+  height: 600px; /* Set a fixed height to prevent resizing */
+  overflow: hidden; /* Hide overflow content to prevent layout shifts */
+}
+
+.tabs-section .container h1 {
+  font-size: 40px;
 }
 
 .tabs-section .container .flex {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.tabs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tabs li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.tabs li.active {
+  background-color: #ececec;
+  border-color: #bbb;
+}
+
+.tabs li i {
+  margin-right: 10px;
+}
+
+.tabs li:hover {
+  background-color: rgba(128, 128, 128, 0.121);
+}
+
+.image-content {
+  width: 35%;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.tabs-section .container > h1 {
-  font-size: 50px;
-  color: rgba(99, 87, 87, 0.725);
+.tab-image {
+  display: none;
 }
 
-.tabs > ul > li {
-  font-size: 24px;
-  color: gray;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 30px;
+.tab-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.tabs > ul > li > p {
-  margin-left: 10px;
-}
-
-.tabs > ul > li:hover {
-  cursor: pointer;
-  background-color: rgba(128, 128, 128, 0.233);
-}
-
-.right-text > div {
+.right-text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Maintain consistent height */
   text-align: left;
 }
 
-.tabs-section .container .flex > div {
-  flex: 1;
+.right-text > div h1 {
+  font-size: 30px;
 }
 
-.tabs-section .container .flex > div:nth-child(1) {
-  flex: content;
+.tab-content {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0;
+  height: 100%; /* Ensures that text does not cause height changes */
 }

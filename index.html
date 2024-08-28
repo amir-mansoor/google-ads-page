@@ -57,47 +57,47 @@
         <div class="flex">
           <div class="tabs">
             <ul>
-              <li class="flex">
+              <li class="flex active" data-target="search">
                 <i class="fa fa-search"></i>
                 <p>Search</p>
               </li>
-              <li class="flex">
+              <li class="flex" data-target="display">
                 <i class="fa fa-image"></i>
                 <p>Display</p>
               </li>
-              <li class="flex">
+              <li class="flex" data-target="shopping">
                 <i class="fa fa-shopping-bag"></i>
                 <p>Shopping</p>
               </li>
-              <li class="flex">
+              <li class="flex" data-target="video">
                 <i class="fa fa-youtube-play"></i>
                 <p>Video</p>
               </li>
-              <li class="flex">
+              <li class="flex" data-target="app">
                 <i class="fa fa-reorder"></i>
                 <p>App</p>
               </li>
             </ul>
           </div>
-          <div>
-            <div class="">
-              <img src="assets/unnamed.png" alt="" srcset="" />
+          <div class="image-content">
+            <div class="tab-image" id="search-image">
+              <img src="assets/unnamed.png" alt="Search Image" />
             </div>
-            <!-- <div class="">
-              <img src="assets/display.png" alt="" srcset="" />
+            <div class="tab-image" id="display-image">
+              <img src="assets/display.png" alt="Display Image" />
             </div>
-            <div class="">
-              <img src="assets/shopping.png" alt="" srcset="" />
+            <div class="tab-image" id="shopping-image">
+              <img src="assets/shopping.png" alt="Shopping Image" />
             </div>
-            <div class="">
-              <img src="assets/youtube.png" alt="" srcset="" />
+            <div class="tab-image" id="video-image">
+              <img src="assets/youtube.png" alt="Video Image" />
             </div>
-            <div class="">
-              <img src="assets/app.png" alt="" srcset="" />
-            </div> -->
+            <div class="tab-image" id="app-image">
+              <img src="assets/app.png" alt="App Image" />
+            </div>
           </div>
           <div class="right-text">
-            <div class="">
+            <div class="tab-content" id="search-content">
               <h1>Start With Search</h1>
               <p>
                 Help drive sales, leads or site traffic by getting your business
@@ -105,7 +105,7 @@
                 products or services you offer.
               </p>
             </div>
-            <!-- <div class="">
+            <div class="tab-content" id="display-content">
               <h1>Engage the eye</h1>
               <p>
                 Build awareness and consideration with memorable, visually
@@ -113,7 +113,7 @@
                 checking Gmail or using mobile apps.
               </p>
             </div>
-            <div class="">
+            <div class="tab-content" id="shopping-content">
               <h1>Offer up your inventory</h1>
               <p>
                 Show up when people are shopping with visually engaging product
@@ -121,8 +121,7 @@
                 sales.
               </p>
             </div>
-
-            <div class="">
+            <div class="tab-content" id="video-content">
               <h1>Bring your brand to life with video</h1>
               <p>
                 Boost awareness of your brand, follow up with former ad viewers
@@ -130,18 +129,41 @@
                 searching for videos on YouTube.
               </p>
             </div>
-
-            <div class="">
+            <div class="tab-content" id="app-content">
               <h1>Promote your app</h1>
               <p>
                 Reach people who are interested in apps like yours to drive
                 installs, or choose to re-engage current users to drive more
                 in-app actions.
               </p>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      const tabs = document.querySelectorAll(".tabs li");
+      const tabImages = document.querySelectorAll(".tab-image");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          const target = tab.getAttribute("data-target");
+          tabImages.forEach((img) => (img.style.display = "none"));
+          tabContents.forEach((content) => (content.style.display = "none"));
+
+          document.getElementById(`${target}-image`).style.display = "block";
+          document.getElementById(`${target}-content`).style.display = "block";
+        });
+      });
+
+      // Initialize the first tab as active
+      document.getElementById("search-image").style.display = "block";
+      document.getElementById("search-content").style.display = "block";
+    </script>
   </body>
 </html>
