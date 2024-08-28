@@ -228,6 +228,7 @@ p {
 
 .theme .container h1 {
   font-size: 40px;
+  color: #185abc;
 }
 
 .theme .container {
@@ -250,4 +251,65 @@ p {
   );
   clip-path: circle(50% at 49% 74%);
   z-index: -1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10rem;
+  gap: 20px;
+  place-items: center;
+  /* text-align: center; */
+}
+
+.grid > div > h3 {
+  font-weight: normal;
+}
+
+.grid > div > p {
+  margin-top: 10px;
+  color: gray;
+  font-size: 18px;
+}
+
+.m-l {
+  margin-left: 30rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.rounded {
+  width: fit-content;
+  padding: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.225);
+  color: rgb(214, 214, 15);
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.13);
+  color: red;
+}
+
+.blue {
+  background-color: rgba(0, 0, 255, 0.084);
+  color: blue;
+}
+
+.gray {
+  background-color: rgba(128, 128, 128, 0.216);
+  color: gray;
+}
+
+.green {
+  background-color: rgba(0, 128, 0, 0.309);
+  color: green;
+}
+
+.icons {
+  font-size: 30px !important;
 }
