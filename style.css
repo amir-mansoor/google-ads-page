@@ -83,3 +83,70 @@ a {
   padding: 10px;
   color: #185abc;
 }
+
+.showcase {
+  text-align: center;
+}
+
+.showcase-main-text > h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.showcase-main-text > h1:nth-child(2) {
+  color: #185abc;
+}
+
+.showcase-main-text > p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(107, 96, 96);
+}
+
+.showcase-main-text > button {
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.tabs-section {
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.tabs-section .container .flex {
+  justify-content: center;
+}
+
+.tabs-section .container > h1 {
+  font-size: 50px;
+  color: rgba(99, 87, 87, 0.725);
+}
+
+.tabs > ul > li {
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.tabs > ul > li > p {
+  margin-left: 10px;
+}
+
+.tabs > ul > li:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.233);
+}
+
+.right-text > div {
+  text-align: left;
+}
+
+.tabs-section .container .flex > div {
+  flex: 1;
+}
+
+.tabs-section .container .flex > div:nth-child(1) {
+  flex: content;
+}
